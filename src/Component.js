@@ -4,7 +4,8 @@ import Interaction from "./Interaction";
 import imgWoman from './images/illustration-woman-online-desktop.svg';
  import imgBox from './images/illustration-box-desktop.svg';
 import backImg from './images/bg-pattern-desktop.svg';
-
+import mobileWom from './images/illustration-woman-online-mobile.svg';
+import mobileBack from './images/bg-pattern-mobile.svg';
 export default function Component(){
     return (
         <main>
@@ -15,12 +16,15 @@ export default function Component(){
             
                 <div className="row">
                 
-                    <div className="col-sm-6 content__picture">
-                         <img className="content__picture-pattern"src={backImg} alt="big women"/>
-                         <img className="content__picture-woman"src={imgWoman} alt="pattern"/>
-                         <img className="content__picture-box"src={imgBox} alt="pattern"/>
+                    <div className="col-md-6 content__picture">
+                        <img className="content__picture-mobile--woman" src={mobileWom} alt="mobile woman"/>
+                        <img className="content__picture-mobile--pattern" src={mobileBack} alt="mobile back"/>
+                        
+                         <img className="content__picture-pattern"src={backImg} alt="background pic"/>
+                         <img className="content__picture-woman"src={imgWoman} alt="woman"/>
+                         <img className="content__picture-box"src={imgBox} alt="box"/>
                     </div>
-                    <div className="col-sm-6 content__faq text-start"><h3>FAQ</h3>
+                    <div className="col-md-6 content__faq text-start"><h3>FAQ</h3>
                     <Interaction/>
                     </div>
                 </div>

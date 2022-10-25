@@ -44,13 +44,18 @@ main{
                   justify-content: space-between;  
                 
             }
-            
+            p{
+                color: $text-dark-blue;
+            }
             // li{
             //     display: inline-block;
             // }
         }
         
     }
+    .content__picture-mobile--woman, .content__picture-mobile--pattern{
+        display: none;
+       }
 }
 
 .content__picture-pattern{
@@ -64,12 +69,86 @@ main{
     left: -90px;
     }
 .content__picture-box{
-        position: absolute;
-        top: 320px;
-    left: 230px;
+    position: absolute;
+    top: 360px;
+    transform: translateX(-165%) translateY(-20%);
+}
     // top: 360px;
     // left: 150px;
-   
+
+    @media(max-width:993px){
+        .content__picture-box{
+            
+            transform: translateX(-140%) translateY(0%);
+            
+        }
+        .content__picture-woman{
+            left: -130px;
+        }
+        .content__picture-pattern{
+            left: -495px;
+        }
+    }
+    @media(max-width:768px){
+        .content{
+            .content__picture-box, .content__picture-pattern, .content__picture-woman{
+                display: none;
+            }
+            
+            .content__picture-mobile--woman{
+                display: block;
+                
+                transform: translateX(53%) translateY(0%);
+    top: 19px;
+    position: absolute;
+    width: 250px;
+            }
+            .content__picture-mobile--pattern{
+                display: block;
+                position: absolute;
+                transform: translateX(57%) translateY(15%);
+            }
+            .content__faq{
+                padding: 90px 30px 10px 30px;
+                h3{
+                    text-align: center;
+                }
+            }
+        }
+        
+    }
+    @media(max-width:530px){
+        .content{
+            .content__picture-mobile--woman{
+                transform: translateX(40%) translateY(0%);
+            }
+            .content__picture-mobile--pattern{
+                transform: translateX(57%) translateY(15%);
+            }
+          
+        }
+        
+    }
+    @media(max-width:375px)
+{
+    main{
+    .container{
+        width: 325px;
+    }
+    .content{
+        .content__picture-mobile--woman{
+            transform: translateX(10%) translateY(-5%);
+        }
+        .content__picture-mobile--pattern{
+            transform: translateX(13%) translateY(15%);
+        }
+        .content__faq{
+            h3{
+            padding: 40px 0px 0px 0px;
+            font-size: 2rem;
+        }}
     }
     
+}
+}
 
