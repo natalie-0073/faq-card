@@ -1,25 +1,18 @@
 import React, {useState} from "react";
 import './_component.scss';
-import arrow from './images/icon-arrow-down.svg';
-export default function Interaction(){
+import ArrowUp from "./ArrowUp";
+import ArrowDown from "./ArrowDown";
+export default function Interaction(props){
+    const [isShowing, setIsShowing]=useState(false);
     return(
-        <ul>
-                        <li><span><img src={arrow} alt="arrow" className="arrow text-end"/></span></li>
-                        <p></p>
-                        <hr/>
-                        <li><span><img src={arrow} alt="arrow" className="arrow text-end"/></span></li>
-                        <p></p>
-                        <hr/>
-                        
-                        <li><span><img src={arrow} alt="arrow" className="arrow text-end"/></span></li>
-                        <p></p>
-                        <hr/>
-                        <li><span><img src={arrow} alt="arrow" className="arrow text-end"/></span></li>
-                        <p></p>
-                        <hr/>
-                        <li><span><img src={arrow} alt="arrow" className="arrow text-end"/></span></li>
-                        <p></p>
-                        <hr/>
-                    </ul>
+        <div>
+            <ul>
+                
+            <li onClick={function(){setIsShowing(!isShowing)}} className={`${isShowing&&"clicked"}`}>{props.question}{isShowing ? <ArrowUp setIsShowing={setIsShowing}/>:<ArrowDown setIsShowing={setIsShowing}/>}</li>
+            {isShowing&&(<p>{props.answer}</p>)}
+            
+            </ul>
+            <hr/>
+        </div>
     );
 }

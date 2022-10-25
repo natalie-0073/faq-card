@@ -34,12 +34,26 @@ main .container {
   list-style-type: none;
   padding: 0;
 }
+.content .content__faq ul .clicked {
+  font-weight: 700;
+}
+.content .content__faq ul .clicked:hover {
+  color: black;
+}
 .content .content__faq ul li {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
+}
+.content .content__faq ul li:hover {
+  color: hsl(14deg, 88%, 65%);
+  transition: 0.2s;
 }
 .content .content__faq ul p {
   color: hsl(240deg, 6%, 50%);
+}
+.content .content__faq ul .arrow-up {
+  rotate: 180deg;
 }
 .content .content__picture-mobile--woman, .content .content__picture-mobile--pattern {
   display: none;
@@ -109,6 +123,7 @@ main .container {
 @media (max-width: 375px) {
   main .container {
     width: 325px;
+    height: 500px;
   }
   main .content .content__picture-mobile--woman {
     transform: translateX(10%) translateY(-5%);
@@ -117,7 +132,7 @@ main .container {
     transform: translateX(13%) translateY(15%);
   }
   main .content .content__faq h3 {
-    padding: 40px 0px 0px 0px;
+    padding: 40px 0px 10px 0px;
     font-size: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

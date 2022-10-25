@@ -22,9 +22,7 @@ main{
     }
    
 }
-// .arrow{
-//     rotate: 180deg;
-// }
+
 .content{
     height: 100%;
     
@@ -36,16 +34,32 @@ main{
             padding-bottom: 30px;
             
         }
+        
         ul{
             list-style-type:none;
             padding: 0;
+            .clicked{
+                font-weight: 700;
+                &:hover{
+                    color: black;
+                }
+            }
             li{
                 display: flex;
-                  justify-content: space-between;  
+                justify-content: space-between;  
+                cursor: pointer;
+                &:hover{
+                    color: $soft-red;
+                    transition: .2s;
+                }
+                
                 
             }
             p{
                 color: $text-dark-blue;
+            }
+            .arrow-up{
+                rotate: 180deg;
             }
             // li{
             //     display: inline-block;
@@ -134,6 +148,7 @@ main{
     main{
     .container{
         width: 325px;
+        height: 500px;
     }
     .content{
         .content__picture-mobile--woman{
@@ -144,7 +159,7 @@ main{
         }
         .content__faq{
             h3{
-            padding: 40px 0px 0px 0px;
+            padding: 40px 0px 10px 0px;
             font-size: 2rem;
         }}
     }

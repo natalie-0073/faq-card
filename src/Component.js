@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import './_component.scss';
 import Interaction from "./Interaction";
 import imgWoman from './images/illustration-woman-online-desktop.svg';
@@ -6,7 +6,10 @@ import imgWoman from './images/illustration-woman-online-desktop.svg';
 import backImg from './images/bg-pattern-desktop.svg';
 import mobileWom from './images/illustration-woman-online-mobile.svg';
 import mobileBack from './images/bg-pattern-mobile.svg';
+import { questions } from "./Questions";
+
 export default function Component(){
+    const [quests]=useState(questions);
     return (
         <main>
             
@@ -25,7 +28,9 @@ export default function Component(){
                          <img className="content__picture-box"src={imgBox} alt="box"/>
                     </div>
                     <div className="col-md-6 content__faq text-start"><h3>FAQ</h3>
-                    <Interaction/>
+                    {quests.map((quest, index)=>(
+                        <Interaction key={index} question={quest.question} answer={quest.answer}/>
+                    ))}
                     </div>
                 </div>
             </div>
