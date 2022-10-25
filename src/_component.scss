@@ -1,0 +1,75 @@
+@import './variables';
+
+main{
+    font-family: $font-family;
+    font-size: 14px;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(101,101,231,1) 35%, rgba(175,103,233,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    .container{
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        width: 900px;
+        height: 480px;
+        background-color: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        
+    }
+   
+}
+// .arrow{
+//     rotate: 180deg;
+// }
+.content{
+    height: 100%;
+    
+    .content__faq{
+        
+        padding: 40px 80px 0px 0px;
+        h3{
+            font-weight: 700;
+            padding-bottom: 30px;
+            
+        }
+        ul{
+            list-style-type:none;
+            padding: 0;
+            li{
+                display: flex;
+                  justify-content: space-between;  
+                
+            }
+            
+            // li{
+            //     display: inline-block;
+            // }
+        }
+        
+    }
+}
+
+.content__picture-pattern{
+    position: relative;
+    width: 835px;
+    left: -460px;
+    top: -230px;}
+.content__picture-woman{
+    position: relative;
+    top: -765px;
+    left: -90px;
+    }
+.content__picture-box{
+        position: absolute;
+        top: 320px;
+    left: 230px;
+    // top: 360px;
+    // left: 150px;
+   
+    }
+    
+
